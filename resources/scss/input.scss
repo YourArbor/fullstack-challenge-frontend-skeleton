@@ -1,0 +1,105 @@
+.arbor-input {
+    .arbor-input-label {
+        font-family: $secondary-font;
+        font-weight: 600;
+        font-size: 18px * $figma-multiplier;
+        line-height: 145%;
+        text-transform: uppercase;
+        color: #637070;
+        margin: 0px;
+    }
+    .arbor-input-field {
+        //margin-top: 6px * $figma-multiplier;
+        background: #FFFFFF;
+        border: 1.5px solid rgba(99, 112, 112, 0.5);
+        border-radius: 12px * $figma-multiplier;
+        position: relative;
+        display: flex;
+        align-items: center;
+        .arbor-input-field-prefix {
+            position: relative;
+            >div {
+                padding: 12px * $figma-multiplier 14px * $figma-multiplier;
+                font-family: $secondary-font;
+                font-weight: 400;
+                font-size: 16px * $figma-multiplier;
+                line-height: 125%;
+                color: rgba(99, 112, 112, 0.5);
+                pointer-events: none;
+                padding-right: 0px;
+            }
+        }
+        .arbor-input-field-input {
+            position: relative;
+            width: 100%;
+            input, .arbor-input-field-postfix {
+                padding: 12px * $figma-multiplier 14px * $figma-multiplier;
+                border: none !important;
+                outline: none !important;
+                background: transparent;
+                width: 100%;
+                height: 100%;
+                left: 0px;
+                top: 0px;
+                box-sizing: border-box;
+
+                font-family: $secondary-font;
+                font-weight: 400;
+                font-size: 16px * $figma-multiplier;
+                line-height: 125%;
+                color: #637070;
+            }
+            .arbor-input-field-postfix {
+                position: absolute;
+                pointer-events: none;
+            }
+            .arbor-input-placeholder {
+                padding: 12px * $figma-multiplier 14px * $figma-multiplier;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+
+                font-family: $secondary-font;
+                font-weight: 400;
+                font-size: 16px * $figma-multiplier;
+                line-height: 125%;
+
+
+                color: rgba(99, 112, 112, 0.5);
+                transition: opacity 0.4s;
+                opacity: 1;
+            }
+        }
+        .arbor-input-field-input-has-prefix {
+            input, .arbor-input-field-postfix, .arbor-input-placeholder {
+                padding-left: 0px;
+            }
+        }
+
+    }
+    .arbor-input-field-search {
+        .icon-Search {
+            position: absolute;
+            padding: 12px * $figma-multiplier 14px * $figma-multiplier;
+            border: none !important;
+            outline: none !important;
+            background: transparent;
+            height: 100%;
+        }
+        input, .arbor-input-field-postfix {
+            padding-left: 34px;
+        }
+    }
+}
+.arbor-input-focus {
+        .arbor-input-placeholder {
+            opacity: 0 !important;
+        }
+}
+.arbor-input.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}

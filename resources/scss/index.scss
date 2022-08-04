@@ -1,0 +1,14 @@
+@import "./variables";
+@import "./color-picker";
+@import "./dropdown";
+@import "./input";
+.step-3-box {
+    padding: 32px * $figma-multiplier;
+
+    position: relative;
+
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px * $figma-multiplier 24px * $figma-multiplier rgba(55, 57, 58, 0.15);
+    border-radius: 32px * $figma-multiplier;
+}

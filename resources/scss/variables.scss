@@ -1,0 +1,22 @@
+$figma-multiplier: 0.75 !default;
+$max-z-index: 2147483647;
+
+$primary-font: 'Plus Jakarta Sans';
+$secondary-font: 'Public Sans';
+
+$primary-color: #28864D !default;
+$warning-color: #dba707 !default;
+$error-color: #db0707 !default;
+$primary-gradient: linear-gradient(105.99deg, #489868 33.45%, #2A7A4A 67.93%);//linear-gradient(105.99deg, rgba(255, 255, 255, 0.15) 33.45%, rgba(55, 57, 58, 0.15) 67.93%), $primary-color !default;
+$warning-gradient: linear-gradient(105.99deg, rgba(255, 255, 255, 0.15) 33.45%, rgba(55, 57, 58, 0.15) 67.93%), $warning-color !default;
+$error-gradient: linear-gradient(105.99deg, rgba(255, 255, 255, 0.15) 33.45%, rgba(55, 57, 58, 0.15) 67.93%), $error-color !default;
+$primary-text-color: white !default;
+
+
+$secondary-background-color: white !default;
+$secondary-button-text-color: $primary-gradient !default;
+
+
+$very-light-grey: #F5F5F7;
+$secondary-background-color-alt: $very-light-grey !default;
+$secondary-button-text-color-alt: #637070 !default;

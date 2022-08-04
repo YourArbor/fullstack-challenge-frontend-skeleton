@@ -1,0 +1,110 @@
+.arbor-dropdown {
+    position: relative;
+    z-index: 0;
+    .arbor-dropdown-label {
+        background: #FFFFFF;
+        border: 1.5px solid #637070;
+        border-radius: 12px * $figma-multiplier;
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 18px * $figma-multiplier;
+        line-height: 145%;
+        color: #637070;
+        padding: 12px * $figma-multiplier;
+        padding-right: 48px * $figma-multiplier;
+        cursor: pointer;
+        position: relative;
+        z-index: $max-z-index;
+        >span {
+            opacity: 0.5;
+        }
+    }
+    .arbor-dropdown-label::before {
+        position: absolute;
+        content: "\e93e";
+        right: 12px;
+        font-size: 24px * $figma-multiplier;
+        font-family: 'arbor-icons';
+        color: #637070;
+        transform: rotate(90deg);
+        transition: transform 0.4s;
+    }
+    .arbor-dropdown-background {
+        display: none;
+        position: fixed;
+        z-index: $max-z-index - 2;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+    }
+    .arbor-dropdown-options {
+        opacity: 0;
+        transform: scaleY(0);
+        transition: transform 0.5s, opacity 0.5s;
+        position: absolute;
+        max-height: 300px;
+        overflow-y: scroll;
+        top: calc(100% - 32px * $figma-multiplier);
+        padding: 8px * $figma-multiplier;
+        padding-top: 32px * $figma-multiplier;
+        z-index: $max-z-index - 1;
+        background: white;
+        width: 100%;
+        transform-origin: top center;
+        box-sizing: border-box;
+        border-radius: 0px 0px 16px * $figma-multiplier 16px * $figma-multiplier;
+        box-shadow: -2px * $figma-multiplier 4px * $figma-multiplier 24px * $figma-multiplier rgba(55, 57, 58, 0.2);
+        .arbor-dropdown-option {
+            margin-top: 8px * $figma-multiplier;
+            padding: 8px * $figma-multiplier;
+            box-sizing: border-box;
+            cursor: pointer;
+            border-radius: 8px * $figma-multiplier;
+            >div {
+                font-family: $secondary-font;
+                font-weight: 400;
+                font-size: 12px;//24px * $figma-multiplier;
+                line-height: 145%;
+                color: #637070;
+            }
+        }
+
+        .arbor-dropdown-option.arbor-dropdown-option-active, .arbor-dropdown-option:hover {
+            background: #F5F5F7;
+            >div {
+                background: $primary-gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+        .arbor-dropdown-option.arbor-dropdown-option-active {
+            background: rgba(40, 134, 77, 0.1);
+        }
+
+    }
+}
+.arbor-dropdown-open {
+    z-index: $max-z-index;
+    .arbor-dropdown-label {
+        border: 1px solid $primary-color;
+        box-shadow: 0px 0px 0px 2px rgba(40, 134, 77, 0.2);
+    }
+    .arbor-dropdown-label::before {
+        transform: rotate(-90deg);
+    }
+    .arbor-dropdown-background {
+        display: block;
+    }
+    .arbor-dropdown-options {
+
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+.arbor-dropdown.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
